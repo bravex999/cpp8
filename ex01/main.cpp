@@ -6,21 +6,35 @@
 
 int main()
 {
-	Span sp = Span(5);
-	
 	try
 	{
+		Span sp = Span(5);
 		sp.addNumber(6);
 		sp.addNumber(3);
 		sp.addNumber(17);
 		sp.addNumber(9);
 		sp.addNumber(11);
-		std::cout << sp.shortestSpan() << std::endl;
-		std::cout << sp.longestSpan() << std::endl;
+		std::cout << "Shortest: " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest: " << sp.longestSpan() << std::endl;
+
+		std::cout << "Prueba exhaustiva (20,000 números):" << std::endl;
+		Span bigSpan(20000);
+		std::vector<int> v;
+		std::srand(std::time(0));
+		for (int i = 0; i < 20000; i++)
+		{
+			v.push_back(std::rand());
+		}
+		bigSpan.addRange(v.begin(), v.end());
+		std::cout << "Shortest: " << bigSpan.shortestSpan() << std::endl;
+		std::cout << "Longest: " << bigSpan.longestSpan() << std::endl;
+
+		std::cout << "Prueba de error (lleno):" << std::endl;
+		bigSpan.addNumber(42);
 	}
 	catch (const std::exception & e)
 	{
-		std::cerr << "Error: " << e.what() << std::endl;
+		std::cerr << "Excepción capturada correctamente" << std::endl;
 	}
 	return 0;
 }

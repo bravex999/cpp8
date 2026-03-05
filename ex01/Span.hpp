@@ -4,6 +4,7 @@
 # include <vector>
 # include <algorithm>
 # include <exception>
+# include <iterator>
 
 class Span
 {
@@ -24,7 +25,9 @@ public:
 	void addRange(Iterator begin, Iterator end)
 	{
 		if (_vec.size() + std::distance(begin, end) > _n)
+		{
 			throw std::exception();
+		}
 		_vec.insert(_vec.end(), begin, end);
 	}
 
