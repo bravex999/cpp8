@@ -36,5 +36,21 @@ int main()
 		++it;
 	}
 	std::stack<int> s(mstack);
+
+	std::cout << "--- list comparison ---" << std::endl;
+	std::list<int> lst;
+	lst.push_back(5);
+	lst.push_back(3);
+	lst.push_back(5);
+	lst.push_back(737);
+	lst.push_back(0);
+	for (std::list<int>::iterator lit = lst.begin(); lit != lst.end(); ++lit)
+		std::cout << *lit << std::endl;
+
+	std::cout << "--- copy test ---" << std::endl;
+	MutantStack<int> copy(mstack);
+	for (MutantStack<int>::iterator cit = copy.begin(); cit != copy.end(); ++cit)
+		std::cout << *cit << std::endl;
+
 	return 0;
 }
