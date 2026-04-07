@@ -41,6 +41,16 @@ int main()
 		std::cout << "Shortest: " << bigSpan.shortestSpan() << std::endl;
 		std::cout << "Longest: " << bigSpan.longestSpan() << std::endl;
 
+		std::cout << "AddRange with list:" << std::endl;
+		std::list<int> lst;
+		lst.push_back(1);
+		lst.push_back(2);
+		lst.push_back(3);
+		Span listSpan(10);
+		listSpan.addRange(lst.begin(), lst.end());
+		std::cout << "Shortest: " << listSpan.shortestSpan() << std::endl;
+		std::cout << "Longest: " << listSpan.longestSpan() << std::endl;
+
 		std::cout << "Error test (full):" << std::endl;
 		bigSpan.addNumber(42);
 	}
