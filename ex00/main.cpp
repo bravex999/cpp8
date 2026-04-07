@@ -23,9 +23,9 @@ int main()
 
 	try
 	{
-		std::cout << "Buscando 3 en vector: " << *easyfind(v, 3) << std::endl;
-		std::cout << "Buscando 5 en lista: " << *easyfind(l, 5) << std::endl;
-		std::cout << "Buscando 10 en vector: " << *easyfind(v, 10) << std::endl;
+		std::cout << "Searching 3 in vector: " << *easyfind(v, 3) << std::endl;
+		std::cout << "Searching 5 in list: " << *easyfind(l, 5) << std::endl;
+		std::cout << "Searching 10 in vector: " << *easyfind(v, 10) << std::endl;
 	}
 	catch (const std::exception & e)
 	{
