@@ -48,10 +48,10 @@ unsigned int Span::shortestSpan()
 	std::vector<int> sorted = _vec;
 	std::sort(sorted.begin(), sorted.end());
 	
-	unsigned int min_diff = sorted[1] - sorted[0];
+	unsigned int min_diff = static_cast<unsigned int>(static_cast<long long>(sorted[1]) - static_cast<long long>(sorted[0]));
 	for (size_t i = 1; i < sorted.size() - 1; i++)
 	{
-		unsigned int diff = sorted[i + 1] - sorted[i];
+		unsigned int diff = static_cast<unsigned int>(static_cast<long long>(sorted[i + 1]) - static_cast<long long>(sorted[i]));
 		if (diff < min_diff)
 			min_diff = diff;
 	}
