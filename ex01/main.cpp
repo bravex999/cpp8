@@ -29,7 +29,7 @@ int main()
 		std::cout << "Shortest: " << sp.shortestSpan() << std::endl;
 		std::cout << "Longest: " << sp.longestSpan() << std::endl;
 
-		std::cout << "Prueba exhaustiva (20,000 números):" << std::endl;
+		std::cout << "Exhaustive test (20,000 numbers):" << std::endl;
 		Span bigSpan(20000);
 		std::vector<int> v;
 		std::srand(std::time(0));
@@ -41,12 +41,12 @@ int main()
 		std::cout << "Shortest: " << bigSpan.shortestSpan() << std::endl;
 		std::cout << "Longest: " << bigSpan.longestSpan() << std::endl;
 
-		std::cout << "Prueba de error (lleno):" << std::endl;
+		std::cout << "Error test (full):" << std::endl;
 		bigSpan.addNumber(42);
 	}
 	catch (const std::exception & e)
 	{
-		std::cerr << "Excepción capturada correctamente" << std::endl;
+		std::cerr << "Exception caught correctly" << std::endl;
 	}
 	return 0;
 }
