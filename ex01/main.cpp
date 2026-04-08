@@ -13,6 +13,7 @@
 #include "Span.hpp"
 #include <iostream>
 #include <vector>
+#include <list>
 #include <ctime>
 #include <cstdlib>
 
